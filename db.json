@@ -13,13 +13,13 @@
       "available": [
         {
           "time": "12:00pm",
-          "day": "Monday",
+          "day": "Mon",
           "month": "Jan",
           "year": "2022"
         },
         {
           "time": "11:00am",
-          "day": "Tuesday",
+          "day": "Tue",
           "month": "Jan",
           "year": "2022"
         }
@@ -38,13 +38,13 @@
       "available": [
         {
           "time": "12:00pm",
-          "day": "Monday",
+          "day": "Mon",
           "month": "Jan",
           "year": "2022"
         },
         {
           "time": "11:00am",
-          "day": "Tuesday",
+          "day": "Tues",
           "month": "Jan",
           "year": "2022"
         }
@@ -63,13 +63,13 @@
       "available": [
         {
           "time": "12:00pm",
-          "day": "Monday",
+          "day": "Mon",
           "month": "Jan",
           "year": "2022"
         },
         {
           "time": "11:00am",
-          "day": "Tuesday",
+          "day": "Wed",
           "month": "Jan",
           "year": "2022"
         }
@@ -88,13 +88,13 @@
       "available": [
         {
           "time": "12:00pm",
-          "day": "Monday",
+          "day": "Thu",
           "month": "Jan",
           "year": "2022"
         },
         {
           "time": "11:00am",
-          "day": "Tuesday",
+          "day": "Tue",
           "month": "Jan",
           "year": "2022"
         }
@@ -113,7 +113,7 @@
       "available": [
         {
           "time": "12:00pm",
-          "day": "Monday",
+          "day": "Fri",
           "month": "Jan",
           "year": "2022"
         },
@@ -138,13 +138,13 @@
       "available": [
         {
           "time": "12:00pm",
-          "day": "Monday",
+          "day": "Sun",
           "month": "Jan",
           "year": "2022"
         },
         {
           "time": "11:00am",
-          "day": "Tuesday",
+          "day": "Wed",
           "month": "Jan",
           "year": "2022"
         }
@@ -163,13 +163,13 @@
       "available": [
         {
           "time": "12:00pm",
-          "day": "Monday",
+          "day": "Sat",
           "month": "Jan",
           "year": "2022"
         },
         {
           "time": "11:00am",
-          "day": "Tuesday",
+          "day": "Tue",
           "month": "Jan",
           "year": "2022"
         }
@@ -188,13 +188,13 @@
       "available": [
         {
           "time": "12:00pm",
-          "day": "Monday",
+          "day": "Mon",
           "month": "Jan",
           "year": "2022"
         },
         {
           "time": "11:00am",
-          "day": "Tuesday",
+          "day": "Thu",
           "month": "Jan",
           "year": "2022"
         }
@@ -219,7 +219,7 @@
         },
         {
           "time": "9:00am",
-          "day": "Friday",
+          "day": "Fri",
           "month": "Jul",
           "year": "2022"
         }

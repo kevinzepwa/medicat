@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function NavBar() {
     return (
-      <Navbar bg="primary" variant="dark" className="stickyNav">
+      <Navbar bg="primary" variant="dark" className="stickyNa">
         <Container>
           <Navbar.Brand href="/">Medicat</Navbar.Brand>
           <Nav className="justify-content-end">
@@ -40,6 +40,16 @@ function NavBar() {
             }}
           >
             Doctors
+          </NavLink>
+          <NavLink
+            to="/booked"
+            exact
+            className="nav"
+            activeStyle={{
+              background: "darkblue",
+            }}
+          >
+            Booked
           </NavLink>
          </Nav>
         </Container>

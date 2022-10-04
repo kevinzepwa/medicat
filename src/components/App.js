@@ -6,6 +6,7 @@ import About from "./About";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import Doctors from "./Doctors";
+import Booked from "./Booked";
 // import 'bootstrap/dist/css/bootstrap.min.css';  //I'm using the CDN instea
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/doctors' element={<Doctors data={data} />} />
+        <Route path='/booked' element={<Booked data={data}/>} />
+        <Route path='/doctors' element={<Doctors data={data} setData={setData} />} />
       </Routes>
       <Footer />
     </div>

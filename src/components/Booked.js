@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Placeholder from 'react-bootstrap/Placeholder';
 import ListGroupItem from 'react-bootstrap/esm/ListGroupItem';
 
-function Doctors( {data} ) {
+function Booked( {data} ) {
     // console.log(data[0].available.time)
     const [ timing, setTiming ] = useState(true)
 
@@ -91,4 +91,4 @@ function Doctors( {data} ) {
       );
 }
 
-export default Doctors;
+export default Booked;
