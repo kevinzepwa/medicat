@@ -1,38 +1,41 @@
-.App {
+
+/* Add basic styling for NavLinks */
+.nav {
+  display: "inline-block";
+  width: 70%;
+  padding: 12px;
+  margin: 0 6px 6px;
+  border-radius: 75px;
+  background: #0d6efd;
+  text-decoration: none;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav:hover {
+  background: #8faacc;
+  color: white
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stickyNav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1
+}
+
+.mainContainer {
+  margin-top: 10px;
+}
+
+.doctorcard {
+  width: 15rem;
+  margin: 15px
+}
+
+.footer {
+  color: #fff;
+  background-color: #0d6efd;
+  text-align: center;
+  padding: 25px 0;
 }
