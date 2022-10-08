@@ -37,7 +37,8 @@ function App() {
                                           booked={booked} 
                                           setBooked={setBooked}
                                           imgPlaceholder={imgPlaceholder}
-                                          /> } /></Routes>
+                                          /> } />
+      </Routes>
       <Footer />
     </div>
   );

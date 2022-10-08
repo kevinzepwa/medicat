@@ -12,7 +12,7 @@ function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
     const [ timing, setTiming ] = useState(true)
     // const [ booked, setBooked ] = useState([])
 
-    setTimeout((timing) => setTiming(false), 3000);
+    setTimeout((timing) => setTiming(false), 2000);
 
     if (timing === true) {
       return (
@@ -53,10 +53,10 @@ function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
 
     function handleClick(e) {
       const filteredBooking = data.filter(d => {
-        return (e.currentTarget.value === d.id)
+        return (d.id != e.currentTarget.value)
       })
       setBooked(filteredBooking)
-      // console.log("<<<>>>", booked)
+      console.log("<<<>>>", filteredBooking)
     }
 
 
@@ -82,7 +82,7 @@ function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
             <Card.Header>
               <Card.Title>{data.name}</Card.Title>
             </Card.Header>
-            <Card.Img variant="top" src={data.img} />
+            <Card.Img variant="top" src={data.img} className="cardimage" />
             <Card.Body>
               <Card.Text>
                 Dr {data.firstName} {data.lastName} is the best {data.role} practitioner in {data.city}. Book an appointment for the available times below.

@@ -32,26 +32,33 @@
   width: 15rem;
   margin: 15px
 }
+.cardimage{
+  max-height: 140px;
+  overflow: hidden;
+}
 
 .footer {
   color: #fff;
   background-color: #0d6efd;
   text-align: center;
   padding: 25px 0;
-
   bottom: 0;
-
+  margin-top: auto;
 }
 
-.home,
-#about {
+.home {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 1rem;
+}
+
+.about {
+  min-height: 100vh;
+  z-index: 1;
 }
 
 .home {
@@ -89,3 +96,8 @@ div.transbox h1 {
 #about a {
   display: block;
 }
+
+.book-now {
+  transition-delay: 3s;
+}
+

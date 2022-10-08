@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
-// import { Link } from 'react-router';
-//import Link from 'react-bootstrap/Link';
+import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 function Home() {
+  function handleClick() {
+    //console.log("<<<>>>")
+  }
 
   return (
     <article className="home">
@@ -12,6 +14,14 @@ function Home() {
              <div>
               <p>Get your health issues sorted today!</p>
              </div>
+             <Button onClick={handleClick}
+                  href="/doctors"
+                  className="book-now"
+                  activeStyle={{
+                    background: "darkblue",
+                  }}>
+                  BOOK NOW
+             </Button>
         </section>
       </div>
     </article>
