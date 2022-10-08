@@ -1,6 +1,4 @@
 import React from "react";
-import Stack from 'react-bootstrap/Stack';
-import { NavLink } from "react-router-dom";
 
 function Footer() {
     return (

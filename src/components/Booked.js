@@ -7,9 +7,10 @@ import Row from 'react-bootstrap/Row';
 import Placeholder from 'react-bootstrap/Placeholder';
 import ListGroupItem from 'react-bootstrap/esm/ListGroupItem';
 
-function Booked( {data} ) {
+function Booked( {data, booked} ) {
     // console.log(data[0].available.time)
     const [ timing, setTiming ] = useState(true)
+    // console.log(booked)
 
     setTimeout((timing) => setTiming(false), 3000);
 
@@ -51,7 +52,7 @@ function Booked( {data} ) {
     }
 
     function handleClick() {
-      console.log(timing)
+      // console.log(timing)
     }
 
     return (

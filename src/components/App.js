@@ -11,10 +11,11 @@ import Booked from "./Booked";
 
 function App() {
   const [ data, setData ] = useState([])
+  const [ booked, setBooked ] = useState([])
+  const url = "http://localhost:8002/data"
+  const imgPlaceholder = require("./assets/images/splash.png");
 
   useEffect(() => {
-    const url = "http://localhost:8002/data"
-    
     fetch(url)
     .then(res => res.json()) 
     .then(newData => setData(newData))
@@ -28,9 +29,15 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/booked' element={<Booked data={data}/>} />
-        <Route path='/doctors' element={<Doctors data={data} setData={setData} />} />
-      </Routes>
+        <Route path='/booked' element={<Booked data={data} booked={booked}/>} />
+        <Route path='/doctors' element={<Doctors 
+                                          data={data} 
+                                          setData={setData} 
+                                          url={url} 
+                                          booked={booked} 
+                                          setBooked={setBooked}
+                                          imgPlaceholder={imgPlaceholder}
+                                          /> } /></Routes>
       <Footer />
     </div>
   );

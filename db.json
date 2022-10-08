@@ -37,12 +37,6 @@
       "city": "Namanga",
       "available": [
         {
-          "time": "12:00pm",
-          "day": "Mon",
-          "month": "Jan",
-          "year": "2022"
-        },
-        {
           "time": "11:00am",
           "day": "Tues",
           "month": "Jan",

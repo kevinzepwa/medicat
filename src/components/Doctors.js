@@ -7,9 +7,10 @@ import Row from 'react-bootstrap/Row';
 import Placeholder from 'react-bootstrap/Placeholder';
 import ListGroupItem from 'react-bootstrap/esm/ListGroupItem';
 
-function Doctors( {data} ) {
+function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
     // console.log(data[0].available.time)
     const [ timing, setTiming ] = useState(true)
+    // const [ booked, setBooked ] = useState([])
 
     setTimeout((timing) => setTiming(false), 3000);
 
@@ -26,7 +27,7 @@ function Doctors( {data} ) {
                   <Placeholder xs={6} />
                 </Placeholder>
               </Card.Header>
-              <Card.Img variant="top" src="https://via.placeholder.com/300.png/09f/fffC/O%20https://placeholder.com/" />
+              <Card.Img variant="top" src={imgPlaceholder} />
               <Card.Body>
                 <Placeholder as={Card.Text} animation="glow">
                   <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
@@ -50,9 +51,26 @@ function Doctors( {data} ) {
         );
     }
 
-    function handleClick() {
-      console.log(timing)
+    function handleClick(e) {
+      const filteredBooking = data.filter(d => {
+        return (e.currentTarget.value === d.id)
+      })
+      setBooked(filteredBooking)
+      // console.log("<<<>>>", booked)
     }
+
+
+    // const handleClick = e => {
+    //   const bookingData = { id, img, role };
+    //   const requestOptions = {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(data)
+    //   };
+    //   fetch(url, requestOptions)
+    //   .then(response => response.json())
+    //   .then(res => console.log(res));  
+    // };
 
     return (
       <Container fluid="md" className='mainContainer'>
@@ -74,8 +92,7 @@ function Doctors( {data} ) {
             <Stack direction="horizontal" gap={2}>
               {data.available.map(d => 
                 (<ListGroupItem as="a" variant="success">
-                  <Button gap={1} onClick={handleClick}>
-                    {/* console.log(available.day) */}
+                  <Button gap={1} onClick={handleClick} value={data.id}>
                     {d.day} {d.time}, {d.month} {d.year}
                   </Button>
                 </ListGroupItem>)
@@ -83,7 +100,6 @@ function Doctors( {data} ) {
             </Stack>
             </Card.Body>
           </>
-
         </Card>
         ))}
        </Row>
