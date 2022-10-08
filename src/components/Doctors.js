@@ -53,7 +53,7 @@ function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
 
     function handleClick(e) {
       const filteredBooking = data.filter(d => {
-        return (d.id != e.currentTarget.value)
+        return (d.id !== e.currentTarget.value)
       })
       setBooked(filteredBooking)
       console.log("<<<>>>", filteredBooking)
