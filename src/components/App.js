@@ -12,7 +12,7 @@ import Booked from "./Booked";
 function App() {
   const [ data, setData ] = useState([])
   const [ booked, setBooked ] = useState([])
-  const url = "http://localhost:8002/data"
+  const url = "https://medicat-server.glitch.me/data"
   const imgPlaceholder = require("./assets/images/splash.png");
 
   useEffect(() => {
