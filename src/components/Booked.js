@@ -5,6 +5,7 @@ import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Placeholder from 'react-bootstrap/Placeholder';
+import Footer from "./Footer";
 import ListGroupItem from 'react-bootstrap/esm/ListGroupItem';
 
 function Booked( {data, booked} ) {
@@ -16,6 +17,7 @@ function Booked( {data, booked} ) {
 
     if (timing === true) {
       return (
+      <>
         <Container fluid="md" className='mainContainer'>
          <Row className="justify-content-md-center">
           { data.map(data => ( 
@@ -48,14 +50,17 @@ function Booked( {data, booked} ) {
           ))}
          </Row>
         </Container>
-        );
-    }
+      <Footer />
+    </>
+    );
+  }
 
     function handleClick() {
       // console.log(timing)
     }
 
     return (
+      <>
       <Container fluid="md" className='mainContainer'>
        <Row className="justify-content-md-center">
         { data.map(data => ( 
@@ -89,7 +94,9 @@ function Booked( {data, booked} ) {
         ))}
        </Row>
       </Container>
-      );
+    <Footer />
+    </>
+  );
 }
 
 export default Booked;

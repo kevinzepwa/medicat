@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Placeholder from 'react-bootstrap/Placeholder';
 import ListGroupItem from 'react-bootstrap/esm/ListGroupItem';
+import Footer from "./Footer";
 
 function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
     // console.log(data[0].available.time)
@@ -16,6 +17,7 @@ function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
 
     if (timing === true) {
       return (
+        <>
         <Container fluid="md" className='mainContainer'>
          <Row className="justify-content-md-center">
           { data.map(data => ( 
@@ -48,8 +50,10 @@ function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
           ))}
          </Row>
         </Container>
-        );
-    }
+     <Footer />
+    </>
+    );
+  }
 
     function handleClick(e) {
       const filteredBooking = data.filter(d => {
@@ -73,6 +77,7 @@ function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
     // };
 
     return (
+      <>
       <Container fluid="md" className='mainContainer'>
        <Row className="justify-content-md-center">
         { data.map(data => ( 
@@ -103,8 +108,10 @@ function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
         </Card>
         ))}
        </Row>
-      </Container>
-      );
+    </Container>
+   <Footer />
+  </>
+  );
 }
 
 export default Doctors;

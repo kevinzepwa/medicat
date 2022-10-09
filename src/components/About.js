@@ -1,8 +1,10 @@
 import React from "react";
+import Footer from "./Footer";
 import Accordion from 'react-bootstrap/Accordion';
 
 function About() {
   return (
+    <>
     <Accordion defaultActiveKey={['0']} alwaysOpen className="about">
       <Accordion.Item eventKey="0">
         <Accordion.Header>Accordion Item #1</Accordion.Header>
@@ -41,8 +43,10 @@ function About() {
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
-    );
-  }
+   <Footer />
+  </>
+   );
+}
 
 export default About;
 

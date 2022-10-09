@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import NavBar from "./NavBar";
-import Footer from "./Footer";
 import Doctors from "./Doctors";
 import Booked from "./Booked";
 // import 'bootstrap/dist/css/bootstrap.min.css';  //I'm using the CDN instea
@@ -39,7 +38,6 @@ function App() {
                                           imgPlaceholder={imgPlaceholder}
                                           /> } />
       </Routes>
-      <Footer />
     </div>
   );
 }
