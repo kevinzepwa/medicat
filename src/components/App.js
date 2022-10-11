@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     fetch(url_2)
-    .then(res => res.json()) 
+    .then(res => res.json())
     .then(newBooked => setBooked(newBooked))
   }, []);
 
@@ -35,7 +35,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/booked' element={<Booked data={data} booked={booked}/>} />
+        <Route path='/booked' element={<Booked data={data} booked={booked} url_2={url_2} setBooked={setBooked} />} />
         <Route path='/doctors' element={<Doctors 
                                           data={data} 
                                           setData={setData} 

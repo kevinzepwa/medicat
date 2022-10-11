@@ -8,8 +8,7 @@ import Placeholder from 'react-bootstrap/Placeholder';
 import Footer from "./Footer";
 import ListGroupItem from 'react-bootstrap/esm/ListGroupItem';
 
-function Booked( {data, booked} ) {
-    // console.log(data[0].available.time)
+function Booked( {booked, url_2, setBooked} ) {
     const [ timing, setTiming ] = useState(true)
     // console.log(booked)
 
@@ -21,7 +20,6 @@ function Booked( {data, booked} ) {
         <Container fluid="md" className='mainContainer'>
          <Row className="justify-content-md-center">
           { booked.map(item => ( 
-              // console.log(">>>>>", data)
           <Card className='doctorcard'>
             <>
               <Card.Header>
@@ -55,9 +53,23 @@ function Booked( {data, booked} ) {
     );
   }
 
-    function handleClick() {
-      console.log(timing)
-    }
+
+    const handleDelete = e => {
+      const deletedBooking = booked.filter(d => {
+        return ((d.id == e.currentTarget.value))
+      })
+      setBooked(deletedBooking) //!!
+
+      // // const bookingData = { id, img, role };
+      // const requestOptions = {
+      //   method: "DELETE",
+      //   // headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(deletedBooking)
+      // };
+      // fetch(url_2, requestOptions)
+      // .then(response => response.json())
+      // .then(res => console.log(res));  
+    };
 
     return (
       <>
@@ -77,7 +89,7 @@ function Booked( {data, booked} ) {
               </Card.Text>
             </Card.Body>
             <Card.Body>
-              <Button variant="danger" gap={1} onClick={handleClick}>
+              <Button variant="danger" gap={1} onClick={handleDelete} value={item.id}>
                 Cancel appointment
               </Button>
             </Card.Body>

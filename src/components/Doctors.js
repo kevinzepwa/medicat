@@ -55,12 +55,18 @@ function Doctors( {data, booked, setBooked, url_2, imgPlaceholder} ) {
     );
   }
 
-
+    // function handleClick(e) {
+    //   const filteredBooking = data.filter(d => {
+    //     return (d.id == e.currentTarget.value)
+    //   })
+    //   //setBooked(filteredBooking)
+    //   //console.log("<<<>>>", booked)
+    // }
 
 
     const handleClick = e => {
       const filteredBooking = data.filter(d => {
-        return (d.id == e.currentTarget.value)
+        return ((d.id == e.currentTarget.value))
       })
 
       //const bookingData = { id, img, role };
@@ -71,7 +77,7 @@ function Doctors( {data, booked, setBooked, url_2, imgPlaceholder} ) {
       };
       fetch(url_2, requestOptions)
       .then(response => response.json())
-      .then(res => console.log(res));  
+      // .then(res => console.log(res));  
     };
 
     return (
