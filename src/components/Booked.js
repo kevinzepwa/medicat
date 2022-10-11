@@ -19,7 +19,7 @@ function Booked( {booked, url_2, setBooked, data, imgPlaceholder} ) {
 
     const handleDelete = e => {
       const deletedBooking = booked.filter(d => {
-        return ((d.id !== e.currentTarget.value))
+        return ((d.id.toString() !== e.currentTarget.value.toString()))
       })
       setBooked(deletedBooking) //!!
     };
