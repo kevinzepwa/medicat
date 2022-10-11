@@ -1,57 +1,20 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Stack from 'react-bootstrap/Stack';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Placeholder from 'react-bootstrap/Placeholder';
+import PlaceHolderComp from './PlaceHolderComp';
 import Footer from "./Footer";
-import ListGroupItem from 'react-bootstrap/esm/ListGroupItem';
 
-function Booked( {booked, url_2, setBooked} ) {
+function Booked( {booked, url_2, setBooked, data, imgPlaceholder} ) {
     const [ timing, setTiming ] = useState(true)
-    // console.log(booked)
 
     setTimeout((timing) => setTiming(false), 3000);
 
     if (timing === true) {
       return (
-      <>
-        <Container fluid="md" className='mainContainer'>
-         <Row className="justify-content-md-center">
-          { booked.map(item => ( 
-          <Card className='doctorcard'>
-            <>
-              <Card.Header>
-                <Placeholder as={Card.Title} animation="glow">
-                  <Placeholder xs={6} />
-                </Placeholder>
-              </Card.Header>
-              <Card.Img variant="top" src="https://via.placeholder.com/300.png/09f/fffC/O%20https://placeholder.com/" />
-              <Card.Body>
-                <Placeholder as={Card.Text} animation="glow">
-                  <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
-                  <Placeholder xs={6} /> <Placeholder xs={8} />
-                </Placeholder>
-              </Card.Body>
-              <Card.Body>
-              <Stack direction="horizontal" gap={2}>
-                {item.available.map(d => 
-                  (<ListGroupItem as="a" variant="success">
-                    <Placeholder.Button variant="primary" xs={6} />
-                  </ListGroupItem>)
-                )}
-              </Stack>
-              </Card.Body>
-            </>
-          </Card>
-          ))}
-         </Row>
-        </Container>
-      <Footer />
-    </>
-    );
-  }
+        <PlaceHolderComp data={data} imgPlaceholder={imgPlaceholder} />
+    )};
 
 
     const handleDelete = e => {

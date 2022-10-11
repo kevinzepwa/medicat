@@ -35,15 +35,19 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/booked' element={<Booked data={data} booked={booked} url_2={url_2} setBooked={setBooked} />} />
+        <Route path='/booked' element={<Booked 
+                              data={data} 
+                              booked={booked} 
+                              url_2={url_2} 
+                              setBooked={setBooked} 
+                              imgPlaceholder={imgPlaceholder}/>} />
         <Route path='/doctors' element={<Doctors 
-                                          data={data} 
-                                          setData={setData} 
-                                          url_2={url_2} 
-                                          booked={booked} 
-                                          setBooked={setBooked}
-                                          imgPlaceholder={imgPlaceholder}
-                                          /> } />
+                              data={data} 
+                              setData={setData} 
+                              url_2={url_2} 
+                              booked={booked} 
+                              setBooked={setBooked}
+                              imgPlaceholder={imgPlaceholder}/> } />
       </Routes>
     </div>
   );
