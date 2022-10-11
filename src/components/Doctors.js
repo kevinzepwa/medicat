@@ -8,7 +8,7 @@ import Placeholder from 'react-bootstrap/Placeholder';
 import ListGroupItem from 'react-bootstrap/esm/ListGroupItem';
 import Footer from "./Footer";
 
-function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
+function Doctors( {data, booked, setBooked, url_2, imgPlaceholder} ) {
     // console.log(data[0].available.time)
     const [ timing, setTiming ] = useState(true)
     // const [ booked, setBooked ] = useState([])
@@ -55,26 +55,24 @@ function Doctors( {data, booked, setBooked, url, imgPlaceholder} ) {
     );
   }
 
-    function handleClick(e) {
+
+
+
+    const handleClick = e => {
       const filteredBooking = data.filter(d => {
-        return (d.id !== e.currentTarget.value)
+        return (d.id == e.currentTarget.value)
       })
-      setBooked(filteredBooking)
-      console.log("<<<>>>", filteredBooking)
-    }
 
-
-    // const handleClick = e => {
-    //   const bookingData = { id, img, role };
-    //   const requestOptions = {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(data)
-    //   };
-    //   fetch(url, requestOptions)
-    //   .then(response => response.json())
-    //   .then(res => console.log(res));  
-    // };
+      //const bookingData = { id, img, role };
+      const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(filteredBooking)
+      };
+      fetch(url_2, requestOptions)
+      .then(response => response.json())
+      .then(res => console.log(res));  
+    };
 
     return (
       <>

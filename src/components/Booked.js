@@ -20,7 +20,7 @@ function Booked( {data, booked} ) {
       <>
         <Container fluid="md" className='mainContainer'>
          <Row className="justify-content-md-center">
-          { data.map(data => ( 
+          { booked.map(item => ( 
               // console.log(">>>>>", data)
           <Card className='doctorcard'>
             <>
@@ -38,7 +38,7 @@ function Booked( {data, booked} ) {
               </Card.Body>
               <Card.Body>
               <Stack direction="horizontal" gap={2}>
-                {data.available.map(d => 
+                {item.available.map(d => 
                   (<ListGroupItem as="a" variant="success">
                     <Placeholder.Button variant="primary" xs={6} />
                   </ListGroupItem>)
@@ -63,17 +63,17 @@ function Booked( {data, booked} ) {
       <>
       <Container fluid="md" className='mainContainer'>
        <Row className="justify-content-md-center">
-        { data.map(data => ( 
-            // console.log(">>>>>", data)
+        { booked.map(item => ( 
+            // console.log(">>>>>", booked)
         <Card className='doctorcard'>
           <>
             <Card.Header>
-              <Card.Title>{data.name}</Card.Title>
+              <Card.Title>{item.name}</Card.Title>
             </Card.Header>
-            <Card.Img className="cardimage" variant="top" src={data.img} />
+            <Card.Img className="cardimage" variant="top" src={item.img} />
             <Card.Body>
               <Card.Text>
-                Dr {data.firstName} {data.lastName} is the best {data.role} practitioner in {data.city}. Book an appointment for the available times below.
+                Dr {item.firstName} {item.lastName} is the best {item.role} practitioner in {item.city}. Book an appointment for the available times below.
               </Card.Text>
             </Card.Body>
             <Card.Body>

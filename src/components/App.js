@@ -11,13 +11,20 @@ import Booked from "./Booked";
 function App() {
   const [ data, setData ] = useState([])
   const [ booked, setBooked ] = useState([])
-  const url = "https://chlorinated-medicat-server.glitch.me/data"
+  const url_1 = "https://chlorinated-medicat-server.glitch.me/data"
+  const url_2 = "https://chlorinated-medicat-server.glitch.me/booked"
   const imgPlaceholder = require("./assets/images/splash.png");
 
   useEffect(() => {
-    fetch(url)
+    fetch(url_1)
     .then(res => res.json()) 
     .then(newData => setData(newData))
+  }, []);
+
+  useEffect(() => {
+    fetch(url_2)
+    .then(res => res.json()) 
+    .then(newBooked => setBooked(newBooked))
   }, []);
 
   // console.log(data)
@@ -32,7 +39,7 @@ function App() {
         <Route path='/doctors' element={<Doctors 
                                           data={data} 
                                           setData={setData} 
-                                          url={url} 
+                                          url_2={url_2} 
                                           booked={booked} 
                                           setBooked={setBooked}
                                           imgPlaceholder={imgPlaceholder}
