@@ -56,7 +56,7 @@ function Booked( {data, booked} ) {
   }
 
     function handleClick() {
-      // console.log(timing)
+      console.log(timing)
     }
 
     return (
@@ -70,23 +70,16 @@ function Booked( {data, booked} ) {
             <Card.Header>
               <Card.Title>{data.name}</Card.Title>
             </Card.Header>
-            <Card.Img variant="top" src={data.img} />
+            <Card.Img className="cardimage" variant="top" src={data.img} />
             <Card.Body>
               <Card.Text>
                 Dr {data.firstName} {data.lastName} is the best {data.role} practitioner in {data.city}. Book an appointment for the available times below.
               </Card.Text>
             </Card.Body>
             <Card.Body>
-            <Stack direction="horizontal" gap={2}>
-              {data.available.map(d => 
-                (<ListGroupItem as="a" variant="success">
-                  <Button gap={1} onClick={handleClick}>
-                    {/* console.log(available.day) */}
-                    {d.day} {d.time}, {d.month} {d.year}
-                  </Button>
-                </ListGroupItem>)
-              )}
-            </Stack>
+              <Button variant="danger" gap={1} onClick={handleClick}>
+                Cancel appointment
+              </Button>
             </Card.Body>
           </>
 
