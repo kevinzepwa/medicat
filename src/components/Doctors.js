@@ -22,16 +22,15 @@ function Doctors( {data, booked, setBooked, url_2, imgPlaceholder} ) {
       const filteredBooking = data.filter(d => {
         return ((d.id == e.currentTarget.value))
       })
-
-      const requestOptions = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(filteredBooking)
-      };
-      fetch(url_2, requestOptions)
-      .then(response => response.json())
-      // .then(res => console.log(res));  
     };
+
+    // const handleClick = e => {
+    //   const bookedItem = booked.filter(d => {
+    //     return ((d.id != e.currentTarget.value))
+    //   })
+    //   setBooked(bookedItem) 
+    //   console.log(bookedItem)
+    // };
 
     return (
       <>

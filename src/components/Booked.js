@@ -19,19 +19,9 @@ function Booked( {booked, url_2, setBooked, data, imgPlaceholder} ) {
 
     const handleDelete = e => {
       const deletedBooking = booked.filter(d => {
-        return ((d.id == e.currentTarget.value))
+        return ((d.id != e.currentTarget.value))
       })
       setBooked(deletedBooking) //!!
-
-      // // const bookingData = { id, img, role };
-      // const requestOptions = {
-      //   method: "DELETE",
-      //   // headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(deletedBooking)
-      // };
-      // fetch(url_2, requestOptions)
-      // .then(response => response.json())
-      // .then(res => console.log(res));  
     };
 
     return (
