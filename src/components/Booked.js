@@ -26,7 +26,7 @@ function Booked( {booked, url_2, setBooked, data, imgPlaceholder} ) {
 
     return (
       <>
-      <Container fluid="md" className='mainContainer'>
+      <Container fluid="md" className='mainContainer booked'>
        <Row className="justify-content-md-center">
         { booked.map(item => ( 
             // console.log(">>>>>", booked)
