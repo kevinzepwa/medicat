@@ -11,7 +11,7 @@ import Booked from "./Booked";
 function App() {
   const [ data, setData ] = useState([])
   const [ booked, setBooked ] = useState([])
-  const url = "https://medicat-server.glitch.me/data"
+  const url = "https://chlorinated-medicat-server.glitch.me/data"
   const imgPlaceholder = require("./assets/images/splash.png");
 
   useEffect(() => {
