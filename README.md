@@ -6,8 +6,7 @@
   - [link](#link)
   - [Authors(shoppers)](#Shopping-enthusiasts)
   - [Setup](#setup)
-    - [Running directly on browser(option 1)](#running-directly-on-browseroption-1)
-    - [Live server on vscode(option 2)](#live-server-on-vscodeoption-2)
+    - [Running server on terminal](#live-server-on-vscodeoption-2)
   - [Licenses](#licenses)
 
 
@@ -15,7 +14,7 @@
 ![alt text][preview]
 
 ## Description
-This is an online healthcare booking application. The app has available physicians. You can choose the practitioner of the speciality you want, see bookings and cancel appointments.
+This is an online healthcare booking application. The app has available physicians. You can choose the practitioner of the speciality you want, see bookings and cancel appointments. The app is served by a custom API (endpoint https://chlorinated-medicat-server.glitch.me)
 
 ## link
 You can view the live page from [here](https://medicat.netlify.app/)
